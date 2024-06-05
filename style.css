@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-lighter: hsl(148, 38%, 91%);
+    --green-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    --white: hsl(0, 0%, 100%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+}
+
+body {
+    background-color: var(--green-lighter);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+label {
+    color: var(--grey-darker);
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--grey-medium);
+    border-radius: 0.35rem;
+    
+}
+
+input:hover, textarea:hover {
+    cursor: pointer;
+    outline: 1px solid var(--green-medium);
+    border: 1px solid var(--green-medium);
+}
+
+input:focus, textarea:focus {
+    cursor: pointer;
+    outline: 1px solid var(--green-medium);
+    border: 1px solid var(--green-medium);
+}
+
+input[type="text"].form-alert, input[type="email"].email-alert {
+    border: 1px solid var(--red);
+}
+
+.form-content:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-alert, .query-type-alert, .terms-alert, .email-alert {
+    display: none;
+    color: var(--red);
+    margin-top: 0.5rem;
+}
+
+.container {
+    background-color: var(--white);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    color: var(--grey-darker);
+    padding-bottom: 1rem;
+}
+
+.form-content {
+    margin-bottom: 1rem;
+}
+
+.query-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.radio-option {
+    width: 100%;
+    border: 1px solid var(--grey-medium);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.35rem;
+}
+
+.radio-option:hover {
+    cursor: pointer;
+    border: 1px solid var(--green-medium);
+}
+
+.radio-option:focus-within {
+    background-color: var(--green-lighter);
+    border: 1px solid --green-medium;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: .5rem;
+    height: .5rem;
+    outline: 2px solid var(--grey-medium);
+    outline-offset: 2px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+input[type="radio"]:checked {
+    outline-color: var(--green-medium);
+    background-color: var(--green-medium);
+}
+
+.form-content:nth-child(5) {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.terms:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    outline: none;
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--green-medium);
+    margin-right: 0.5rem;
+}
+
+button {
+    background-color: var(--green-medium);
+    color: var(--white);
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.35rem;
+    border: none;
+}
+
+button:focus {
+    cursor: pointer;
+    background-color: var(--grey-darker);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.success {
+    background-color: var(--grey-darker);
+    color: var(--white);
+    width: max-content;
+    border-radius: .35rem;
+    padding: 1rem;
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.message-heading {
+    display: inline;
+    font-weight: bold;
+}
+
+@media (max-width: 440px) {
+    .form-content:nth-child(1) {
+        flex-direction: column;
+    }
+
+    .query-option {
+        flex-direction: column;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    .success {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 287px) {
+
+    * {
+        font-size: 0.8rem;
+    }
+    .form-content:nth-child(1) {
+        flex-direction: column;
+    }
+
+    .query-option {
+        flex-direction: column;
+    }
+
+    textarea {
+        height: 70px;
+    }
+}
+
+
+
+
+
+
+
+
+
